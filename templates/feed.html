@@ -1,4 +1,4 @@
-<ion-view >
+<ion-view view-title="TED">
 	<ion-content >
 
 		<ion-refresher
@@ -10,7 +10,8 @@
 		This is the list of results rendered in the built in ionic 'card' list style.
 		-->
 		<div class="list card"
-		     ng-repeat="post in feed.posts" >
+		     ng-repeat="post in feed.posts"
+				 ui-sref="post({id:post.link})">
 
 			<div class="item" >
 				<h2 >{{ post.title }}</h2 >
