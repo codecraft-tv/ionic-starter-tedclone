@@ -7,7 +7,7 @@ app.controller('FeedCtrl', function ($scope, FeedService) {
 	$scope.feed.loadFeed();
 
 	$scope.doRefresh = function () {
-		FeedService.then(function () {
+		$scope.feed.loadFeed().then(function () {
 			$scope.$broadcast('scroll.refreshComplete');
 		});
 	};
