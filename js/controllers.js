@@ -10,7 +10,7 @@ app.controller('FeedCtrl', function ($scope, $ionicLoading, FeedService) {
 	});
 
 	$scope.doRefresh = function () {
-		FeedService.then(function () {
+		FeedService.loadFeed().then(function () {
 			$scope.$broadcast('scroll.refreshComplete');
 		});
 	};
