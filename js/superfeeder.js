@@ -74,7 +74,7 @@ window.superfeedr = {
 					content: i.summary,
 					url: json.status.feed,
 					thumbnail: i.image,
-					publishedDate: new Date(i.published)
+					publishedDate: new Date(i.published * 1000)
 				});
 			});
 			console.log(googleFeedObject);
